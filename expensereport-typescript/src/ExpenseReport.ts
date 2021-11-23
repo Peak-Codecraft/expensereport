@@ -21,7 +21,7 @@ function printReport(expenses: Expense[]) {
   let totalExpenses: number = 0
   let mealExpenses: number = 0
 
-  process.stdout.write("Expenses: " + new Date().toISOString().substr(0, 10) + "\n")
+  process.stdout.write("Expenses: " + todaysDate() + "\n")
 
 
   for (const expense of expenses) {
@@ -54,3 +54,9 @@ function printReport(expenses: Expense[]) {
 }
 
 export {sumTwoValues, printHelloWorld, printReport, Expense, ExpenseType}
+
+
+function todaysDate() {
+  return new Date().toISOString().substr(0, 10);
+}
+
