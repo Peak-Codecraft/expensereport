@@ -25,6 +25,7 @@ The ExpenseReport example currently exists in the following languages:
 - [C++](expensereport-cxx/)
 - [Clojure](expensereport-clojure/) ⇐ This one was particularly painful to intentionally write poorly, I almost cried.
 - [COBOL](expensereport-cobol/)
+- [D](expensereport-d/)
 - [Dart](expensereport-dart/)
 - [F#](expensereport-fsharp/)
 - [Fortran](expensereport-fortran/)
@@ -32,9 +33,11 @@ The ExpenseReport example currently exists in the following languages:
 - [Groovy](expensereport-groovy/)
 - [Java](expensereport-java/)
 - [JavaScript](expensereport-javascript/)
+- [Julia](expensereport-julia/)
 - [Kotlin](expensereport-kotlin/)
 - [Lisp](expensereport-lisp/) (Common Lisp)
 - [Lua](expensereport-lua/)
+- [Nim](expense-report-nim/)
 - [Objective-C](expensereport-objc/)
 - [Pascal](expensereport-pascal/)
 - [Perl](expensereport-perl/)
@@ -59,13 +62,11 @@ The ExpenseReport example currently exists in the following languages:
 (in no particular order and with no guarantee)
 
 - Ada
-- D
 - Eiffel
 - Elixir
 - Elm
 - Erlang
 - Haskell
-- Julia
 - Logo
 - Modula-2 (once the linker starts working again)
 - Oberon
