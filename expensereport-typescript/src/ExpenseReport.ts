@@ -42,7 +42,7 @@ function printReport(expenses: Expense[]) {
         break
     }
 
-    let mealOverExpensesMarker = expense.type == "dinner" && expense.amount > 5000 || expense.type == "breakfast" && expense.amount > 1000 ? "X" : " "
+   let mealOverExpensesMarker = isMealOverExpenseLimit(expense);
 
     process.stdout.write(expenseName + "\t" + expense.amount + "\t" + mealOverExpensesMarker + "\n")
 
@@ -55,6 +55,11 @@ function printReport(expenses: Expense[]) {
 
 export {sumTwoValues, printHelloWorld, printReport, Expense, ExpenseType}
 
+function isMealOverExpenseLimit(expense: Expense) {
+  
+ let  expenseMarker = expense.type == "dinner" && expense.amount > 5000 || expense.type == "breakfast" && expense.amount > 1000 ? "X" : " ";
+  return expenseMarker ;
+}
 
 function todaysDate() {
   return new Date().toISOString().substr(0, 10);
