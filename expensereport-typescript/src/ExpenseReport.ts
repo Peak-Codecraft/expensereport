@@ -9,10 +9,10 @@ const printHelloWorld = (): void => {
 type ExpenseType = "dinner" | "breakfast" | "car-rental"
 
 class Expense {
-  type: ExpenseType
+  kindOfExpense: ExpenseType
   amount: number
   constructor(type: ExpenseType, amount: number) {
-    this.type = type
+    this.kindOfExpense = type
     this.amount = amount
   }
 }
@@ -25,12 +25,13 @@ function printReport(expenses: Expense[]) {
 
 
   for (const expense of expenses) {
-    if (expense.type == "dinner" || expense.type == "breakfast") {
+    if (expense.kindOfExpense == "dinner" || expense.kindOfExpense == "breakfast") {
       mealExpenses += expense.amount
     }
 
     let expenseName = ""
-    switch (expense.type) {
+
+    switch (expense.kindOfExpense) {
       case "dinner":
         expenseName = "Dinner"
         break
@@ -57,7 +58,7 @@ export {sumTwoValues, printHelloWorld, printReport, Expense, ExpenseType}
 
 function isMealOverExpenseLimit(expense: Expense) {
   
- let  expenseMarker = expense.type == "dinner" && expense.amount > 5000 || expense.type == "breakfast" && expense.amount > 1000 ? "X" : " ";
+ let  expenseMarker = expense.kindOfExpense == "dinner" && expense.amount > 5000 || expense.kindOfExpense == "breakfast" && expense.amount > 1000 ? "X" : " ";
   return expenseMarker ;
 }
 
