@@ -10,7 +10,7 @@ describe(`ExpenseReport`, () => {
         printReport([
           new Expense("dinner", 5001)
         ])
-        expect(interceptedOutput).toEqual("")
+        expect(interceptedOutput).toEqual("Expenses: 2021-11-23\nDinner\t5001\tX\nMeal Expenses: 5001\nTotal Expenses: 5001\n")
     })
 })
 
